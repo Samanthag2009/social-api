@@ -9,20 +9,16 @@ const ThoughtSchema = new Schema(
             minlength: 1,
             maxlength: 280
         },
-        email: {
-            type: string,
-            unique: true,
-            required: true,
-            match: [/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/]
+        createdAt: {
+            type: Date,
+            default: Date.now,
+            get: (createdAtVal) => dateFormat(createdAtVal),
         },
-        thoughts: [{
-            type: Schema.Types.ObjectId,
-            ref: 'Thought'
-        }],
-        friends: [{
-            type: Schema.Types.ObjectId,
-            ref: 'User'
-        }]
+        thoughts: {
+            type: string,
+            required: true
+        },
+        reactions: [ReactionSchema]
     },
     {
         toJSON: {
@@ -33,14 +29,47 @@ const ThoughtSchema = new Schema(
     },
 );
 
-//virtual for friendCount
+//Schema for Reactions
 
-UserSchema.virtual('friendCount').get( () => {
-    return this.friends.length;
+const ReactionSchema = new Schema(
+    {
+        reactionId: {
+            type: ObjectId,
+            default: new
+        },
+        createdAt: {
+            type: Date,
+            default: Date.now,
+            get: (createdAtVal) => dateFormat(createdAtVal),
+        },
+        username: {
+            type: string,
+            required: true
+        },
+        reactionBody: {
+            type: string,
+            required: true,
+            maxlength: 280
+        }
+    },
+    {
+        toJSON: {
+            virtuals: true,
+            getters: true
+        },
+    id: false
+    },
+);
+
+
+
+//virtual for reactionCount
+ThoughtSchema.virtual('reactionCount').get( () => {
+    return this.reactions.length;
 });
 
 //create model
-const Thought = model('Thought', UserSchema);
+const Thought = model('Thought', ThoughtSchema);
 
 //export model
 module.exports = Thought;
