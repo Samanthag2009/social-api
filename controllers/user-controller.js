@@ -55,7 +55,7 @@ const userController = {
         }
     },
     //DELETE user by id
-    async deleteUserById(res, res) {
+    async deleteUserById(req, res) {
         try {
             const user = await User.findOneAndDelete({ _id: req.params.thoughtId });
             

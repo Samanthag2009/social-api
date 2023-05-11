@@ -59,7 +59,7 @@ const thoughtController = {
         }
     },
     //DELETE thought by id
-    async deleteThoughtById(res, res) {
+    async deleteThoughtById(req, res) {
         try {
             const thought = await Thought.findOneAndDelete({ _id: req.params.thoughtId });
             
