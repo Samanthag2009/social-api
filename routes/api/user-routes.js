@@ -10,10 +10,10 @@ const {
     deleteFriendFromList
 } = require("..//../controllers/user-controller");
 
-//GET all thoughts, POST new thought on api/user
+//GET all users, POST new user on api/user
 router.route("/").get(getAllUsers).post(postNewUser);
 
-//GET thought, PUT thought, DELETE thought all by id /api/user:id
+//GET user, PUT user, DELETE user all by id /api/user:id
 router.route("/:id").get(getUserById).post(updateUserById).delete(deleteUserById);
 
 //POST to add a new friend to a user's friend list
