@@ -34,8 +34,8 @@ const ThoughtSchema = new Schema(
 const ReactionSchema = new Schema(
     {
         reactionId: {
-            type: ObjectId,
-            default: new
+            type: Schema.Types.ObjectId,
+            default: new Types.ObjectId(),
         },
         createdAt: {
             type: Date,
