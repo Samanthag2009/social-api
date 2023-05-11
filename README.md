@@ -1,60 +1,75 @@
-# Regex Tutorial
+![SocialAPI](./images/API.png)
+
+# Social Network API
 
 
-Simple overview of use/purpose.
+The Social Network API is a backend technology that has been built to accomodate the core functions of a social media network. Become a user, make some friends, and post away!
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+The Social Media API is a NoSQL-based probram that uses MongoDB as well as Node and Express to bring you accurate API calls and ease of use. 
+
+With thoughtful controllers to describe functionality:
+
+![controller](./images/controller.png)
+
+Models to represent our controllers
+
+![model](./images/model.png)
+
+and API routes to tie it all together.
+
+![route](./images/route.png)
+
+Our index.js and connection.js serve as the code behind the API server and Database server respectively. 
+
+![serverapi](./images/server.png)
+
+![dbserver](./images/dbserver.png)
 
 ## Getting Started
 
 ### Dependencies
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
-
-### Installing
-
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+* Express.js
+* MongoDB
+* Mongoose
+* Nodemon
 
 ### Executing program
 
-* How to run the program
-* Step-by-step bullets
+First, install the necesarry packages using the command 
 ```
-code blocks for commands
+npm i
 ```
+Then, seed your database using 
+```
+npm run seed
+```
+Finally, start your server with:
+```
+npm run start
+```
+### Video Tutorial and Github
 
-## Help
+Click here for the video tutorial for the Social API:
 
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
+To see this project on Github, click here: 
 
 ## Authors
 
-Contributors names and contact info
-
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+Samantha Gosselin is a fullstack web developer based in Austin, Texas. You can view her work on [github](https://github.com/Samanthag2009) or connect on [linkedIn](https://www.linkedin.com/in/samantha-gosselin-37493517/)
 
 ## Version History
 
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
 * 0.1
     * Initial Release
-
-## License
-
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
 
 ## Acknowledgments
 
 Readme Template:
 * [awesome-readme](https://github.com/matiassingers/awesome-readme)
+
+Tutorial on connecting to MongoDB in Node.js:
+* [The Net Ninja](https://www.youtube.com/watch?v=gGNquGHqpNI)
 
