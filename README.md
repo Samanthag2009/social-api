@@ -52,7 +52,7 @@ npm run start
 ```
 ### Video Tutorial and Github
 
-Click here for the video tutorial for the Social API:
+Click here for the video tutorial for the Social API: [Video Tutorial Version 1 Release](https://drive.google.com/file/d/1W-s1zSxOnguxT17AFkTLRVQJHJTiHjI6/view)
 
 To see this project on Github, click here: 
 
@@ -63,7 +63,7 @@ Samantha Gosselin is a fullstack web developer based in Austin, Texas. You can v
 ## Version History
 
 * 0.1
-    * Initial Release
+    * Initial Release - Challenges include being unable to test routes, likely due to server error.
 
 ## Acknowledgments
 
@@ -72,4 +72,10 @@ Readme Template:
 
 Tutorial on connecting to MongoDB in Node.js:
 * [The Net Ninja](https://www.youtube.com/watch?v=gGNquGHqpNI)
+
+Syntax and Comparison in Routes and Models:
+* [JoshCarter8400](https://github.com/JoshCarter8400/social-network-api/tree/main)
+
+Server, Route and Controller Comparison and Syntax:
+* [Student Mini-Project, Module 18] (https://github.com/the-Coding-Boot-Camp-at-UT/UTA-VIRT-FSF-PT-11-2022-U-LOLC/tree/main/18-NoSQL/01-Activities/28-Stu_Mini-Project) 
 
